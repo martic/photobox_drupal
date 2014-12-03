@@ -171,9 +171,9 @@ function _photobox_library_path() {
 
   if (is_null($library_path)) {
     $library_path = variable_get('photobox_library_path', module_exists('libraries') ? libraries_get_path('photobox') : 'sites/all/libraries/photobox');
-    if (file_exists($library_path . '/photobox.js') || file_exists($library_path . '/photobox.min.js')) {
+    if (file_exists($library_path . '/jquery.photobox.js') || file_exists($library_path . '/photobox.min.js')) {
     }
-    elseif (file_exists($library_path . '/photobox/photobox.js') || file_exists($library_path . '/photobox/photobox.min.js')) {
+    elseif (file_exists($library_path . '/photobox/jquery.photobox.js') || file_exists($library_path . '/photobox/photobox.min.js')) {
       $library_path .= '/photobox';
     }
     else {
@@ -195,8 +195,8 @@ function _photobox_library_path_js() {
     if (file_exists($library_path . '/photobox.min.js')) {
       $library_path_js = $library_path . '/photobox.min.js';
     }
-    elseif (file_exists($library_path . '/photobox.js')) {
-      $library_path_js = $library_path . '/photobox.js';
+    elseif (file_exists($library_path . '/jquery.photobox.js')) {
+      $library_path_js = $library_path . '/jquery.photobox.js';
     }
   }
 
